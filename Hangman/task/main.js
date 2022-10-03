@@ -6,7 +6,13 @@ const Console = require("console");
 
 function printWelcome () {
     console.log("H A N G M A N")
-    console.log("The game will be available soon.")
 }
 
 printWelcome();
+let word = input('Guess the word: ')
+if (word == 'python') {
+    console.log('You survived!')
+} else {
+    console.log('You lost!')
+}
+
