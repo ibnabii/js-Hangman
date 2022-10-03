@@ -16,10 +16,13 @@ function randomWord (array) {
 
 printWelcome();
 let target = randomWord(words);
-let word = input('Guess the word: ')
+let current = Array.from(target);
+current.fill('-', 3);
+
+let word = input(`Guess the word ${current.join('')}:`);
 if (word === target) {
-    console.log('You survived!')
+    console.log('You survived!');
 } else {
-    console.log('You lost!')
+    console.log('You lost!');
 }
 
