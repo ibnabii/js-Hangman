@@ -4,13 +4,20 @@
 const input = require('sync-input')
 const Console = require("console");
 
+const words = ["python", "java", "swift", "javascript"];
+
 function printWelcome () {
-    console.log("H A N G M A N")
+    console.log("H A N G M A N");
+}
+
+function randomWord (array) {
+    return array[Math.floor(Math.random() * array.length)];
 }
 
 printWelcome();
+let target = randomWord(words);
 let word = input('Guess the word: ')
-if (word == 'python') {
+if (word === target) {
     console.log('You survived!')
 } else {
     console.log('You lost!')
